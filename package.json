@@ -1,0 +1,16 @@
+{
+  "name": "weixin",
+  "version": "1.0.0",
+  "description": "node wechat",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "node server/app.js"
+  },
+  "author": "svon@svon.org",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "swig": "^1.4.2"
+  }
+}
