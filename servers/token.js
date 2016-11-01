@@ -10,7 +10,7 @@ function sha1(str){
   str = md5sum.digest("hex");
   return str;
 }
-
+// http://wx.jsccok.cn/wechat/svonme
 function main(app) {
 	app.use('/wechat/svonme', function(req, res, next){
 		// url 
