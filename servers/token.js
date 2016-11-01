@@ -14,7 +14,7 @@ function sha1(str){
 function main(app) {
 	app.use('/wechat/svonme', function(req, res, next){
 		// url 
-	   	var query = req.getdata();
+	   	var query = req.query;
 		var signature = query.signature;
 		var echostr = query.echostr;
 		var timestamp = query['timestamp'];
