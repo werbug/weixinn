@@ -18,7 +18,9 @@ $(function(){
 			'onMenuShareTimeline',
             'onMenuShareAppMessage',
             'onMenuShareQQ',
-            'onMenuShareWeibo'
+            'onMenuShareWeibo',
+            //获取查看用户网络状态权限
+            'onGetNetworkType'
 		].join(",")
 	},function(resp){
 		wx.config({
@@ -40,4 +42,14 @@ $(function(){
                 wx.onMenuShareTimeline(obj);
         });
 	},"json");
+	
+	$("#getNetworkType").on("click",function(){
+		wx.getNetworkType({
+		    success: function (res) {
+		    	// 返回网络类型2g，3g，4g，wifi
+		        var networkType = res.networkType;
+		        alert(networkType);
+		    }
+		});
+	});
 })
