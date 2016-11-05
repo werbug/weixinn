@@ -55,7 +55,7 @@ function jssdk(app){
 
 	//获取签名权限
 	function createSignature(res,query){
-		
+		console.log('create Signature');
 		//需要获取的权限
 		//没有指定获取什么签名就使用默认值
 		var apilist = query.apilist || "";
@@ -128,7 +128,7 @@ function jssdk(app){
             return data;
         };
         var query = getdata();
-        console.log(req.body);
+        console.log(query);
         var headers = req.headers;
         //拿到请求的目标的地址
         //比如 浏览器访问 服务器，拿到的是发起请求的的域名或则 ip
