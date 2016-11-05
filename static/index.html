@@ -2,9 +2,24 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>微信 jssdk </title>
+		<script src="jquery.min.js"></script>
 	</head>
 	<body>
-		hello world
+		<script type="text/html">
+			function jsonpcallback(res){
+				console.log(res);
+			}
+			var script = document.createElement("script");
+			script.src = "/wechat/jssdk?callback=jsonpcallback";
+			document.querySelector("body").appendChild(script);
+		</script>
+		<script>
+			$.post("/wechat/jssdk",{
+				apilist:"onMenuShareQQ"
+			},function(data){
+				console.log(data);
+			},"json");
+		</script>
 	</body>
 </html>
